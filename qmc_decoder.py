@@ -110,8 +110,8 @@ class QMCDecoder:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="QMC decoder")
-    parser.add_argument('-i', '--input', help='input dir')
-    parser.add_argument('-o', '--output', help='output dir', default=None)
+    parser.add_argument('-i', '--input', help='input dir', required=True)
+    parser.add_argument('-o', '--output', help='output dir, default will create /output dir under input path', default=None)
     parser.add_argument('-f', '--force', help='overwirte output dir', default=False, action="store_true")
     flags = parser.parse_args().__dict__
 
